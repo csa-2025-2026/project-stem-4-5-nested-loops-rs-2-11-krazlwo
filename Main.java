@@ -9,12 +9,26 @@ public class Main
 
   public static void printNTimes(String word, int N)
   {
-    // code solution here
+    for (int i = 0; i < word.length(); i++)
+    {
+      string current+letter = word.substring(i, i++);
+      for (int j = 0; j < N; j++)
+      {
+        System.out.println(current_letter + " ");
+      }
+      System.out.println();
+    }
   }
 
   public static void printNums()
   {
-    // code solution here
+    for (int y = 1; y <= 10; y++)
+    {
+      for (int ten = 1; ten <= 10; ten++)
+      {
+        System.out.print("10");
+      }
+    }
   }
 
   public static void uprightNumberTriangle(int N)
