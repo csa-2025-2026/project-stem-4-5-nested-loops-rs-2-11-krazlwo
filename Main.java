@@ -4,36 +4,50 @@ public class Main
 {
   public static void main(String[] args)
   {
-    // Make sure to test your methods here
+    printNTimes("code", 3);
+    printNums();
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("enter a number");
+    int N = scanner.nextInt();
+    uprightNumberTriangle(N);
+
+    scanner.close();
   }
 
   public static void printNTimes(String word, int N)
   {
     for (int i = 0; i < word.length(); i++)
     {
-      string current+letter = word.substring(i, i++);
       for (int j = 0; j < N; j++)
       {
-        System.out.println(current_letter + " ");
+        String letter = word.substring(i, i+1);
+        System.out.print(letter);
       }
-      System.out.println();
     }
   }
 
   public static void printNums()
   {
-    for (int y = 1; y <= 10; y++)
+    for (int curr_index = 10; curr_index > 0; curr_index--)
     {
-      for (int ten = 1; ten <= 10; ten++)
+      for (int curr_num = 0; curr_num < curr_index; curr_num++)
       {
-        System.out.print("10");
+        System.out.print(curr_index + " ");
       }
+      System.out.println();
     }
   }
 
   public static void uprightNumberTriangle(int N)
   {
-    // code solution here
+   for (int row = 1; row <= N; row++)
+   {
+    for (int currentnumber = 1; currentnumber <= row; currentnumber++)
+    {
+      System.out.print(currentnumber  + " ");
+    }
+    System.out.println();
+   }
   }
 
   public static void starTree()
@@ -43,6 +57,12 @@ public class Main
 
   public static void multTable()
   {
-    // code solution here
-  }
+    for (int therow = 1; therow >= 100; therow++)
+    {
+      for (int num = 1; num<= 10; num++)
+      {
+        System.out.println(therow * num)
+      }
+      System.out.println();
+    }
 }
